@@ -1,37 +1,7 @@
 {
+  "api_level": 3,
   "dial": {
     "enable": true,
-    "x_offset": 0,
-    "y_offset": 0
-  },
-  "hour": {
-    "enable": false,
-    "x_offset": 0,
-    "y_offset": 0
-  },
-  "min": {
-    "enable": false,
-    "smooth": true,
-    "x_offset": 0,
-    "y_offset": 0
-  },
-  "sec": {
-    "enable": false,
-    "x_offset": 0,
-    "y_offset": 0
-  },
-  "hour_shadow": {
-    "enable": false,
-    "x_offset": 0,
-    "y_offset": 0
-  },
-  "min_shadow": {
-    "enable": false,
-    "x_offset": 0,
-    "y_offset": 0
-  },
-  "sec_shadow": {
-    "enable": false,
     "x_offset": 0,
     "y_offset": 0
   },
@@ -41,12 +11,25 @@
       "type": "date",
       "label": "%H:%M",
       "font": "LCD",
-      "font_color": "#CEB573",
+      "font_color": "#EFEFEF",
       "align": "center",
       "font_size": 48,
-      "x_offset": 55,
-      "y_offset": 70,
-      "x_size": 130,
+      "x_offset": 50,
+      "y_offset": 80,
+      "x_size": 140,
+      "y_size": 50
+    },
+    {
+      "enable": true,
+      "type": "date",
+      "label": "%S",
+      "font": "LCD",
+      "font_color": "#EFEFEF",
+      "align": "center",
+      "font_size": 32,
+      "x_offset": 50,
+      "y_offset": 115,
+      "x_size": 140,
       "y_size": 50
     },
     {
@@ -56,19 +39,21 @@
       "font": "LCD",
       "font_color": "#EFEFEF",
       "align": "center",
-      "font_size": 16,
+      "font_size": 12,
       "x_offset": 55,
-      "y_offset": 30,
+      "y_offset": 40,
       "x_size": 130,
       "y_size": 35
-    }    {
+    },
+    {
       "enable": true,
       "type": "battery_percent",
       "label": "%d%%",
-      "font_color": "#B5ADB5",
+       "font": "LCD",
+      "font_color": "#EFEFEF",
       "align": "center",
-      "font_size": 12,
-      "x_offset": 15,
+      "font_size": 16,
+      "x_offset": 10,
       "y_offset": 15,
       "x_size": 50,
       "y_size": 16
@@ -76,39 +61,95 @@
       {
       "enable": true,
       "type": "battery_voltage",
-      "label": "%3.2gV",
-      "font_color": "#B5ADB5",
-      "font_size": 12,
+      "label": "%.2fV",
+       "font": "LCD",
+      "font_color": "#EFEFEF",
+      "font_size": 16,
       "align": "center",
       "hide_interval": 0,
-      "x_offset": 175,
+      "x_offset": 177,
       "y_offset": 15,
       "x_size": 50,
       "y_size": 16
     },
     {
       "enable": true,
-      "type": "steps",
-      "label": "STEPS:%d",
-      "font_color": "#B5ADB5",
-      "font_size": 18,
+      "type": "text",
+      "label": "STEPS",
+       "font": "LCD",
+      "font_color": "#EFEFEF",
+      "font_size": 12,
       "align": "left",
       "hide_interval": 0,
-      "x_offset": 18,
-      "y_offset": 190,
+      "x_offset": 10,
+      "y_offset": 165,
       "x_size": 155,
       "y_size": 40
     },
     {
       "enable": true,
+      "type": "steps",
+      "label": "%d",
+       "font": "LCD",
+      "font_color": "#EFEFEF",
+      "font_size": 12,
+      "align": "left",
+      "hide_interval": 0,
+      "x_offset": 10,
+      "y_offset": 180,
+      "x_size": 155,
+      "y_size": 40
+    },
+    {
+      "enable": "ble > 0",
+      "type": "text",
+      "label": "\uf293",
+      "font": "Montserrat",
+      "font_color": "#EFEFEF",
+      "align": "center",
+      "font_size": 22,
+      "x_offset": 140,
+      "y_offset": 210,
+      "x_size": 24,
+      "y_size": 24
+    },
+    {
+      "enable": "wifi > 0",
+      "type": "text",
+      "label": "\uf1eb",
+      "font": "Montserrat",
+      "font_color": "#EFEFEF",
+      "align": "center",
+      "font_size": 22,
+      "x_offset": 110,
+      "y_offset": 210,
+      "x_size": 24,
+      "y_size": 24
+    },
+    {
+      "enable": "gps > 0",
+      "type": "text",
+      "label": "\uf124",
+      "font": "Montserrat",
+      "font_color": "#EFEFEF",
+      "align": "center",
+      "font_size": 22,
+      "x_offset": 80,
+      "y_offset": 210,
+      "x_size": 24,
+      "y_size": 24
+    },
+    {
+      "enable": true,
       "type": "bluetooth_messages",
       "label": "messages:%d",
-      "font_color": "#B5ADB5",
+       "font": "LCD",
+     "font_color": "#B5ADB5",
       "align": "center",
       "font_size": 12,
-      "x_offset": 95,
+      "x_offset": 70,
       "y_offset": 160,
-      "x_size": 50,
+      "x_size": 100,
       "y_size": 16
     }
   ]
